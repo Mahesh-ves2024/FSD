@@ -1,1 +1,580 @@
 
+1. Personal Portfolio Web Page Using HTML and CSS
+File: index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: lightblue;
+            text-align: center;
+        }
+        .box {
+            background: white;
+            margin: 50px auto;
+            padding: 30px;
+            width: 60%;
+            border-radius: 10px;
+        }
+        h1 { color: blue; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>My Portfolio</h1>
+        <h2>My Name: Mahesh</h2>
+        <p>Third Year AIDS Student</p>
+
+        <h3>About Me</h3>
+        <p>I am learning Full Stack Development.</p>
+
+        <h3>Skills</h3>
+        <p>HTML, CSS, JavaScript, React, Node.js</p>
+
+        <h3>Contact</h3>
+        <p>Email: mahesh@gmail.com</p>
+    </div>
+</body>
+</html>
+
+
+2. Student Registration Form Using HTML and CSS3
+File: registration.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: lightblue;
+        }
+        form {
+            background: white;
+            padding: 25px;
+            width: 300px;
+            margin: 50px auto;
+            border-radius: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Student Registration</h2>
+
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="number" placeholder="Roll Number">
+
+        <select>
+            <option>Select Course</option>
+            <option>AIDS</option>
+            <option>Computer</option>
+            <option>IT</option>
+        </select>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
+
+
+3. Simple Calculator Using JavaScript
+File: calculator.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+
+    <input type="number" id="a" placeholder="First Number">
+    <input type="number" id="b" placeholder="Second Number">
+
+    <br><br>
+
+    <button onclick="calculate('+')">Add</button>
+    <button onclick="calculate('-')">Subtract</button>
+    <button onclick="calculate('*')">Multiply</button>
+    <button onclick="calculate('/')">Divide</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function calculate(op) {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let r;
+
+            if (op == '+') r = a + b;
+            else if (op == '-') r = a - b;
+            else if (op == '*') r = a * b;
+            else if (op == '/') r = b != 0 ? a / b : "Cannot divide by zero";
+
+            document.getElementById("result").innerHTML = "Result: " + r;
+        }
+    </script>
+</body>
+</html>
+
+
+4. Student Marks and Result Management Using JavaScript
+File: student.html
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Student Result</h2>
+
+    <input id="name" placeholder="Student Name"><br><br>
+    <input id="m1" type="number" placeholder="Subject 1"><br><br>
+    <input id="m2" type="number" placeholder="Subject 2"><br><br>
+    <input id="m3" type="number" placeholder="Subject 3"><br><br>
+
+    <button onclick="showResult()">Calculate Result</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function showResult() {
+            let name = document.getElementById("name").value;
+            let a = Number(document.getElementById("m1").value);
+            let b = Number(document.getElementById("m2").value);
+            let c = Number(document.getElementById("m3").value);
+
+            let total = a + b + c;
+            let percentage = total / 3;
+            let status = (a >= 35 && b >= 35 && c >= 35) ? "PASS" : "FAIL";
+
+            document.getElementById("result").innerHTML =
+                "Name: " + name +
+                "<br>Total: " + total +
+                "<br>Percentage: " + percentage.toFixed(2) + "%" +
+                "<br>Result: " + status;
+        }
+    </script>
+</body>
+</html>
+
+
+5. Interactive To-Do List Using JavaScript
+File: todo.html
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>My To-Do List</h2>
+
+    <input id="task" placeholder="Enter Task">
+    <button onclick="addTask()">Add</button>
+
+    <ul id="list"></ul>
+
+    <script>
+        function addTask() {
+            let task = document.getElementById("task").value;
+
+            if (task == "") return;
+
+            let li = document.createElement("li");
+            li.innerHTML = task;
+
+            let btn = document.createElement("button");
+            btn.innerHTML = "Delete";
+
+            btn.onclick = function() {
+                li.remove();
+            };
+
+            li.appendChild(btn);
+            document.getElementById("list").appendChild(li);
+
+            document.getElementById("task").value = "";
+        }
+    </script>
+</body>
+</html>
+
+
+6. Online Quiz Application Using JavaScript
+File: quiz.html
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Online Quiz</h2>
+
+    <p>1. What does HTML stand for?</p>
+
+    <input type="radio" name="q1" value="0"> Hyper Text Makeup Language<br>
+    <input type="radio" name="q1" value="1"> Hyper Text Markup Language<br>
+    <input type="radio" name="q1" value="0"> High Text Machine Language<br><br>
+
+    <p>2. Which language is used for web styling?</p>
+
+    <input type="radio" name="q2" value="1"> CSS<br>
+    <input type="radio" name="q2" value="0"> Java<br>
+    <input type="radio" name="q2" value="0"> Python<br><br>
+
+    <button onclick="check()">Submit Quiz</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function check() {
+            let score = 0;
+
+            let q1 = document.querySelector('input[name="q1"]:checked');
+            let q2 = document.querySelector('input[name="q2"]:checked');
+
+            if (q1 && q1.value == "1") score++;
+            if (q2 && q2.value == "1") score++;
+
+            document.getElementById("result").innerHTML =
+                "Your Score: " + score + "/2";
+        }
+    </script>
+</body>
+</html>
+
+
+
+PART 2 – REACT.JS
+React installation (common for programs 7–10)
+Open VS Code terminal and run:
+npm create vite@latest myapp -- --template react
+cd myapp
+npm install
+npm run dev
+
+
+Open src/App.jsx, remove existing code and paste the required program.
+7. Simple React Application
+File: src/App.jsx
+function App() {
+    return (
+        <div>
+            <h1>Welcome to React</h1>
+            <h2>My First React Application</h2>
+            <p>Learning Full Stack Development</p>
+        </div>
+    );
+}
+
+export default App;
+
+
+8. Student Management Application Using React
+File: src/App.jsx
+import { useState } from "react";
+
+function App() {
+    const [name, setName] = useState("");
+    const [students, setStudents] = useState([]);
+
+    function addStudent() {
+        if (name.trim() === "") return;
+
+        setStudents([...students, name]);
+        setName("");
+    }
+
+    return (
+        <div>
+            <h2>Student Management</h2>
+
+            <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Enter Student Name"
+            />
+
+            <button onClick={addStudent}>Add Student</button>
+
+            <ul>
+                {students.map((s, index) => (
+                    <li key={index}>{s}</li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+export default App;
+
+
+9. React-Based To-Do List Application
+File: src/App.jsx
+import { useState } from "react";
+
+function App() {
+    const [task, setTask] = useState("");
+    const [tasks, setTasks] = useState([]);
+
+    function addTask() {
+        if (task.trim() === "") return;
+
+        setTasks([...tasks, task]);
+        setTask("");
+    }
+
+    function deleteTask(index) {
+        setTasks(tasks.filter((t, i) => i !== index));
+    }
+
+    return (
+        <div>
+            <h2>To-Do List</h2>
+
+            <input
+                value={task}
+                onChange={(e) => setTask(e.target.value)}
+                placeholder="Enter Task"
+            />
+
+            <button onClick={addTask}>Add</button>
+
+            {tasks.map((t, i) => (
+                <p key={i}>
+                    {t}
+                    <button onClick={() => deleteTask(i)}>
+                        Delete
+                    </button>
+                </p>
+            ))}
+        </div>
+    );
+}
+
+export default App;
+
+
+10. React-Based Counter Application
+File: src/App.jsx
+import { useState } from "react";
+
+function App() {
+    const [count, setCount] = useState(0);
+
+    return (
+        <div>
+            <h2>React Counter</h2>
+
+            <h1>{count}</h1>
+
+            <button onClick={() => setCount(count + 1)}>
+                Increase
+            </button>
+
+            <button onClick={() => setCount(count - 1)}>
+                Decrease
+            </button>
+
+            <button onClick={() => setCount(0)}>
+                Reset
+            </button>
+        </div>
+    );
+}
+
+export default App;
+
+
+
+PART 3 – NODE.JS
+Node.js installation
+1. Download Node.js from Official Node.js website.
+2. Install it.
+3. Open VS Code terminal.
+4. Check installation:
+node -v
+npm -v
+
+
+11. Simple Node.js Server Application
+File: server.js
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { "Content-Type": "text/html" });
+
+    res.end("<h1>Welcome to Node.js Server</h1>");
+});
+
+server.listen(3000, () => {
+    console.log("Server running at http://localhost:3000");
+});
+
+
+Run:
+node server.js
+
+
+Open http://localhost:3000 in browser.
+12. File Handling Application Using Node.js
+File: file.js
+const fs = require("fs");
+
+// Create and write file
+fs.writeFileSync("student.txt", "Welcome to Node.js");
+
+// Read file
+let data = fs.readFileSync("student.txt", "utf8");
+console.log("File Content:", data);
+
+// Append data
+fs.appendFileSync("student.txt", "\nStudent Management");
+
+// Read updated file
+console.log(fs.readFileSync("student.txt", "utf8"));
+
+// Delete file
+// fs.unlinkSync("student.txt");
+
+
+Run:
+node file.js
+
+
+13. Synchronous and Asynchronous Programming Using Node.js
+File: async.js
+const fs = require("fs");
+
+console.log("Program Started");
+
+// Synchronous
+let data = fs.readFileSync("student.txt", "utf8");
+console.log("Sync:", data);
+
+// Asynchronous
+fs.readFile("student.txt", "utf8", (err, data) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log("Async:", data);
+    }
+});
+
+console.log("Program Ended");
+
+
+Run:
+node async.js
+
+
+Expected concept:
+- Synchronous: Executes line by line and waits for completion.
+- Asynchronous: Does not wait; continues executing other statements.
+- Callback: A function passed as an argument to another function.
+- Event Loop: Handles asynchronous callbacks when the call stack is free.
+
+PART 4 – EXPRESS.JS
+Express installation (common for programs 14–15)
+Create a project folder and open its terminal.
+npm init -y
+npm install express
+
+
+14. Student Management Web Application Using Express.js
+File: server.js
+const express = require("express");
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+
+let students = ["Mahesh", "Rahul", "Amit"];
+
+app.get("/", (req, res) => {
+    res.send(`
+        <h2>Student Management</h2>
+
+        <form action="/add" method="POST">
+            <input name="name" placeholder="Student Name">
+            <button type="submit">Add Student</button>
+        </form>
+
+        <h3>Student List</h3>
+        ${students.map(s => `<p>${s}</p>`).join("")}
+    `);
+});
+
+app.post("/add", (req, res) => {
+    if (req.body.name.trim() !== "") {
+        students.push(req.body.name);
+    }
+    res.redirect("/");
+});
+
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
+});
+
+
+Run:
+node server.js
+
+
+Open http://localhost:3000.
+15. Online Quiz Application Using Express.js
+File: server.js
+const express = require("express");
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+    res.send(`
+        <h2>Online Quiz</h2>
+
+        <form action="/submit" method="POST">
+
+            <p>1. Which is a programming language?</p>
+            <input type="radio" name="q1" value="HTML"> HTML<br>
+            <input type="radio" name="q1" value="Java"> Java<br>
+
+            <p>2. Which is used for styling?</p>
+            <input type="radio" name="q2" value="CSS"> CSS<br>
+            <input type="radio" name="q2" value="SQL"> SQL<br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    `);
+});
+
+app.post("/submit", (req, res) => {
+    let score = 0;
+
+    if (req.body.q1 === "Java") score++;
+    if (req.body.q2 === "CSS") score++;
+
+    res.send(`
+        <h2>Quiz Result</h2>
+        <h3>Your Score: ${score}/2</h3>
+        <a href="/">Try Again</a>
+    `);
+});
+
+app.listen(3000, () => {
+    console.log("Quiz running at http://localhost:3000");
+});
+
+
+Run:
+node server.js
+
+
+Open http://localhost:3000.
