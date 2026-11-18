@@ -1,0 +1,149 @@
+CATEGORY 3 – Node.js & Express
+25. First Node.js program (app.js)
+console.log("Hello World");
+let a = 10;
+let b = 20;
+console.log("Addition:", a + b);
+
+// Run: node app.js
+
+
+26. Node.js file system module
+const fs = require("fs");
+fs.writeFileSync("demo.txt", "Hello Node.js");
+console.log("File created");
+
+
+27. require() and import
+// CommonJS
+const fs = require("fs");
+
+// ES Modules (when project is configured for modules)
+import fs from "node:fs";
+
+
+28. Callback function
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();
+}
+function message() {
+  console.log("Welcome to Full Stack");
+}
+greet("Mahesh", message);
+
+
+29. setTimeout and asynchronous execution
+console.log("Start");
+setTimeout(function() {
+  console.log("Inside Callback");
+}, 2000);
+console.log("End");
+// Output: Start, End, Inside Callback
+
+
+30. setInterval and clearInterval
+let timer = setInterval(() => {
+  console.log("Running");
+}, 1000);
+setTimeout(() => {
+  clearInterval(timer);
+}, 5000);
+
+
+31. Promise with then() and catch()
+let promise = new Promise((resolve, reject) => {
+  let success = true;
+  if (success) resolve("Task Completed");
+  else reject("Task Failed");
+});
+promise
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
+
+
+32. async and await
+function getData() {
+  return new Promise(resolve => {
+    setTimeout(() => resolve("Data Received"), 2000);
+  });
+}
+async function showData() {
+  let result = await getData();
+  console.log(result);
+}
+showData();
+
+
+33. Install Express
+mkdir express-practical
+cd express-practical
+npm init -y
+npm install express
+# Create app.js, then run: node app.js
+
+
+34. Express app with routes and JSON
+const express = require("express");
+const app = express();
+const PORT = 3000;
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Hello World! Welcome to Express");
+});
+
+app.get("/about", (req, res) => {
+  res.send("This is About Page");
+});
+
+app.get("/student", (req, res) => {
+  res.json({ name: "Mahesh", roll: 32 });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+
+35. Express middleware
+const express = require("express");
+const app = express();
+
+app.use((req, res, next) => {
+  console.log("Request Received");
+  next();
+});
+
+app.get("/", (req, res) => {
+  res.send("Home Page");
+});
+
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
+});
+
+
+36. Express HTTP methods
+// GET - retrieve data
+app.get("/students", (req, res) => res.send("Get students"));
+
+// POST - create data
+app.post("/students", (req, res) => res.send("Create student"));
+
+// PUT - replace/update
+app.put("/students/:id", (req, res) => res.send("Update student"));
+
+// PATCH - partially update
+app.patch("/students/:id", (req, res) => res.send("Partially update student"));
+
+// DELETE - delete
+app.delete("/students/:id", (req, res) => res.send("Delete student"));
+Quick execution reference
+•	HTML: Save as index.html and open in a browser (or use Live Server).
+•	JavaScript with Node: node script.js
+•	React/Vite: npm install, then npm run dev
+•	Node.js: node app.js
+•	Express: npm install express, then node app.js; open http://localhost:3000
+•	Stop a running terminal server: Ctrl + C
