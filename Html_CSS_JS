@@ -1,0 +1,238 @@
+CATEGORY 1 – HTML, CSS & JavaScript
+1. Basic HTML page
+<!DOCTYPE html>
+<html>
+<head><title>My First Page</title></head>
+<body>
+  <h1>Welcome</h1>
+  <p>This is my webpage.</p>
+</body>
+</html>
+
+2. HTML formatting, links, images, lists, tables and multimedia
+<h1>Heading</h1>
+<p><b>Bold</b> <strong>Important</strong> <i>Italic</i>
+<u>Underline</u> <mark>Highlight</mark> <del>Deleted</del>
+H<sub>2</sub>O x<sup>2</sup></p>
+
+<a href="https://google.com" target="_blank">Google</a>
+<img src="photo.jpg" alt="My Image" width="200">
+
+<ol><li>HTML</li><li>CSS</li></ol>
+<ul><li>React</li><li>Node.js</li></ul>
+
+<table border="1">
+  <tr><th>Name</th><th>Roll No</th></tr>
+  <tr><td>Mahesh</td><td>32</td></tr>
+</table>
+
+<audio controls><source src="song.mp3" type="audio/mpeg"></audio>
+<video width="300" controls><source src="video.mp4" type="video/mp4"></video>
+
+
+3. Inline, internal and external CSS
+<!-- Inline -->
+<h1 style="color:red;">Hello</h1>
+
+<!-- Internal CSS goes inside <style> in the head -->
+<style>
+h1 { color: blue; font-size: 30px; }
+</style>
+
+<!-- External CSS link goes inside the head -->
+<link rel="stylesheet" href="style.css">
+
+/* style.css */
+h1 { color: green; }
+
+
+4. CSS selectors
+p { color: blue; }                 /* element */
+#heading { color: red; }           /* ID */
+.box { background: yellow; }       /* class */
+* { margin: 0; }                   /* universal */
+h1, p { font-family: Arial; }      /* group */
+div p { color: green; }            /* descendant */
+
+
+5. Pseudo-classes and pseudo-elements
+button:hover { background: green; }
+input:focus { border: 2px solid blue; }
+input:valid { background: lightgreen; }
+input:invalid { background: pink; }
+li:first-child { color: red; }
+
+p::first-letter { color: red; font-size: 30px; }
+p::first-line { font-weight: bold; }
+h1::before { content: "★ "; }
+h1::after { content: "!"; }
+
+
+6. CSS box model and responsive design
+.box {
+  width: 200px; padding: 20px;
+  border: 2px solid black; margin: 10px;
+}
+@media (max-width: 600px) {
+  h1 { font-size: 20px; }
+}
+
+
+7. Registration form with CSS
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+body { font-family: Arial; background: #eee; }
+form { background: white; padding: 20px; width: 300px; margin: auto; }
+input { padding: 8px; margin: 8px 0; width: 90%; }
+button:hover { background: green; color: white; }
+</style>
+</head>
+<body>
+<form>
+  <h2>Registration Form</h2>
+  Name: <input type="text" placeholder="Enter name" required>
+  Email: <input type="email" required>
+  Password: <input type="password" minlength="6" required>
+  Gender:
+  <input type="radio" name="gender"> Male
+  <input type="radio" name="gender"> Female
+  <button type="submit">Register</button>
+</form>
+</body>
+</html>
+
+
+8. JavaScript variables, data types and condition
+var name = "Mahesh";
+let age = 21;
+const college = "VESIT";
+let isStudent = true;
+let x = null;
+let y; // undefined
+
+if (age >= 18) {
+  console.log("Eligible");
+} else {
+  console.log("Not Eligible");
+}
+
+
+9. JavaScript loops
+for (let i = 1; i <= 5; i++) console.log(i);
+
+let j = 1;
+while (j <= 5) {
+  console.log(j);
+  j++;
+}
+
+
+
+10. Functions and arrow functions
+function add(a, b) {
+  return a + b;
+}
+console.log(add(10, 20));
+
+const multiply = (a, b) => a * b;
+console.log(multiply(4, 5));
+
+
+11. Arrays and array methods
+let fruits = ["Apple", "Mango", "Banana"];
+console.log(fruits[0]);
+fruits.push("Orange");  // add at end
+fruits.pop();           // remove last
+fruits.shift();         // remove first
+fruits.unshift("Kiwi"); // add at beginning
+console.log(fruits.length);
+
+let nums = [1, 2, 3, 4];
+console.log(nums.map(n => n * 2));
+console.log(nums.filter(n => n > 2));
+nums.forEach(n => console.log(n));
+
+
+
+12. Objects and strings
+let student = { name: "Mahesh", roll: 32, branch: "AIDS" };
+console.log(student.name);
+console.log(student.roll);
+
+let str = "Full Stack Development";
+console.log(str.length);
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str.includes("Stack"));
+console.log(str.indexOf("Development"));
+console.log(str.slice(0, 9));
+
+
+
+13. DOM and click event
+<button id="btn">Click Me</button>
+<p id="demo">Original text</p>
+<script>
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button Clicked!");
+  document.getElementById("demo").innerHTML = "Hello";
+});
+</script>
+
+
+
+14. JavaScript class
+class Student {
+  constructor(name, roll) {
+    this.name = name;
+    this.roll = roll;
+  }
+  display() {
+    console.log(this.name);
+    console.log(this.roll);
+  }
+}
+let s1 = new Student("Mahesh", 32);
+s1.display();
+
+
+
+15. Error handling
+try {
+  let result = 10 / 0;
+  if (!Number.isFinite(result)) throw new Error("Invalid result");
+  console.log(result);
+} catch (error) {
+  console.log("Error:", error.message);
+} finally {
+  console.log("Program completed");
+}
+
+
+
+16. JavaScript form validation
+<!DOCTYPE html>
+<html><body>
+<form id="myForm">
+  Name: <input type="text" id="name"><br><br>
+  Email: <input type="text" id="email"><br><br>
+  Password: <input type="password" id="password"><br><br>
+  <button type="submit">Submit</button>
+</form>
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  if (name === "") alert("Name is required");
+  else if (!email.includes("@")) alert("Enter valid email");
+  else if (password.length < 6) alert("Password must have 6 characters");
+  else alert("Form Submitted Successfully");
+});
+</script>
+</body></html>
