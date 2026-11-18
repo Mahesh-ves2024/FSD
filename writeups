@@ -1,0 +1,113 @@
+1. HTML, CSS and JavaScript Programs (1–6)
+Aim: To design and develop a web application using HTML, CSS3 and JavaScript.
+
+Objectives:
+1. To create the structure of a webpage using HTML.
+2. To style the webpage using CSS.
+3. To add interactivity and functionality using JavaScript.
+Theory:
+- HTML: HTML is used to create the basic structure of a webpage using tags and elements.
+- CSS: CSS is used to style webpages by adding colors, fonts, layouts and designs.
+- JavaScript: JavaScript is a scripting language used to make webpages interactive and dynamic.
+- DOM: DOM allows JavaScript to access and modify HTML elements.
+Algorithm:
+1. Start the program.
+2. Create an HTML file.
+3. Design the webpage using HTML elements.
+4. Apply CSS styles to the webpage.
+5. Write JavaScript functions to perform the required operations.
+6. Execute the program in a web browser.
+7. Observe the output.
+8. Stop.
+Result: Thus, the required web application was successfully developed using HTML, CSS3 and JavaScript.
+
+Conclusion: Learned how to create, style and add interactive functionality to webpages.
+
+2. React.js Programs (7–10)
+Aim: To develop a dynamic web application using React.js.
+
+Objectives:
+1. To understand React.js and its components.
+2. To create reusable UI components.
+3. To manage data using React Hooks.
+4. To handle user interactions.
+Theory:
+- React.js: React is a JavaScript library used to build interactive user interfaces.
+- Components: Components are reusable building blocks of a React application.
+- JSX: JSX allows us to write HTML-like syntax inside JavaScript.
+- Props: Props are used to pass data from one component to another.
+- useState: It is a React Hook used to manage state in functional components.
+Algorithm:
+1. Start the program.
+2. Create a React application using Vite.
+3. Install the required dependencies.
+4. Import React and required hooks.
+5. Create a functional component.
+6. Define state and functions using useState.
+7. Design the user interface using JSX.
+8. Run the application using npm run dev.
+9. Observe the output.
+10. Stop.
+Result: Thus, the required React application was successfully developed and executed.
+
+Conclusion: Learned to create reusable components and interactive applications using React.js.
+
+3. Node.js Programs (11–13)
+Aim: To develop an application using Node.js.
+
+Objectives:
+1. To understand the Node.js environment.
+2. To execute JavaScript outside the browser.
+3. To perform server-side operations.
+4. To understand file handling and asynchronous programming.
+Theory:
+- Node.js: Node.js is a JavaScript runtime environment used to execute JavaScript outside the browser.
+- HTTP Module: Used to create an HTTP server.
+- File System (fs): Used to create, read, update and delete files.
+- Synchronous: Executes operations one after another and waits for completion.
+- Asynchronous: Executes operations without blocking the remaining program.
+- Callback: A function passed as an argument to another function.
+Algorithm:
+1. Start the program.
+2. Create a Node.js project or JavaScript file.
+3. Import the required modules.
+4. Write the required functions.
+5. Perform the required operations.
+6. Execute the program using Node.js.
+7. Observe the output in the terminal or browser.
+8. Stop.
+Result: Thus, the required application was successfully developed and executed using Node.js.
+
+Conclusion: Learned server-side JavaScript execution, file handling and asynchronous programming using Node.js.
+
+4. Express.js Programs (14–15)
+Aim: To develop a web application using Express.js.
+
+Objectives:
+1. To understand the Express.js framework.
+2. To create a web server.
+3. To handle HTTP requests and responses.
+4. To implement GET and POST routes.
+Theory:
+- Express.js: Express is a lightweight web application framework built on Node.js.
+- Routing: Routing defines how an application responds to different URLs.
+- GET: Used to retrieve information from the server.
+- POST: Used to send data to the server.
+- Middleware: Functions that execute during the request-response cycle.
+- Request: Data sent by the client to the server.
+- Response: Data sent by the server to the client.
+Algorithm:
+1. Start the program.
+2. Create a Node.js project.
+3. Install Express using npm.
+4. Import the Express module.
+5. Create an Express application.
+6. Define the required routes.
+7. Handle GET and POST requests.
+8. Start the server using the listen() method.
+9. Open the application in a browser.
+10. Observe the output.
+11. Stop.
+Result: Thus, the required web application was successfully developed using Express.js.
+
+Conclusion: Learned to develop web applications and handle HTTP requests and responses using Express.js.
